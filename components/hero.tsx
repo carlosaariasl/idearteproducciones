@@ -133,7 +133,7 @@ export function Hero() {
 
       <div className="absolute right-6 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-4">
         <span className="font-mono text-xs text-muted-foreground [writing-mode:vertical-lr]">
-          Est. 2010
+          +15 años de experiencia
         </span>
       </div>
     </section>
