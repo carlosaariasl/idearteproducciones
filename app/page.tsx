@@ -7,6 +7,7 @@ import { Portfolio } from "@/components/portfolio";
 import { Process } from "@/components/process";
 import { Contact } from "@/components/contact";
 import { Footer } from "@/components/footer";
+import { WhatsAppButton } from "@/components/whatsapp-button";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Process />
       <Contact />
       <Footer />
+      <WhatsAppButton />
     </main>
   );
 }
