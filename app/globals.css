@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-space-mono);
+  
+  --color-background: #0d0d0d;
+  --color-foreground: #fafafa;
+  --color-muted: #1a1a1a;
+  --color-muted-foreground: #a3a3a3;
+  --color-card: #141414;
+  --color-card-foreground: #fafafa;
+  --color-primary: #f5f5f5;
+  --color-primary-foreground: #0d0d0d;
+  --color-secondary: #262626;
+  --color-secondary-foreground: #fafafa;
+  --color-accent: #d4a853;
+  --color-accent-foreground: #0d0d0d;
+  --color-gold: #d4a853;
+  --color-gold-light: #e8c47a;
+  --color-gold-dark: #b8860b;
+  --color-silver: #c0c0c0;
+  --color-border: #2d2d2d;
+  --color-ring: #d4a853;
+  
+  --radius: 0.5rem;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-muted);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
+
+/* Diamond pattern background inspired by logo */
+.diamond-pattern {
+  background-image: 
+    linear-gradient(45deg, transparent 48%, rgba(212, 168, 83, 0.03) 49%, rgba(212, 168, 83, 0.03) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(212, 168, 83, 0.03) 49%, rgba(212, 168, 83, 0.03) 51%, transparent 52%);
+  background-size: 30px 30px;
+}
+
+/* Golden gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #e8c47a 0%, #d4a853 50%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Golden border gradient */
+.border-gradient-gold {
+  border-image: linear-gradient(135deg, #e8c47a, #d4a853, #b8860b) 1;
+}
