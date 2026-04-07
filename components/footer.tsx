@@ -39,7 +39,7 @@ const footerLinks = {
     { label: "Produccion de Espectaculos", href: "#servicios" },
   ],
   empresa: [
-    { label: "Nosotros", href: "#" },
+    { label: "Nosotros", href: "#nosotros" },
     { label: "Portafolio", href: "#portafolio" },
     { label: "Proceso", href: "#proceso" },
     { label: "Contacto", href: "#contacto" },
