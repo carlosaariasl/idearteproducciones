@@ -14,17 +14,25 @@ const spaceMono = Space_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IDEARTE Producciones | Productora Audiovisual Guatemala",
+  title: "IDEARTE Producciones | La Certeza de su Exito",
   description:
-    "Productora audiovisual especializada en produccion musical, visual y de espectaculos. Himnos institucionales, videos corporativos, eventos y mas.",
+    "Productora audiovisual guatemalteca con mas de 15 anos de experiencia. Produccion musical, visual y de espectaculos. Himnos institucionales, videos corporativos, jingles, spots de TV y eventos de alto impacto.",
   keywords: [
-    "produccion musical",
+    "produccion musical Guatemala",
     "produccion audiovisual",
-    "videos corporativos",
+    "videos corporativos Guatemala",
     "eventos Guatemala",
-    "jingles",
+    "jingles publicitarios",
     "spots de TV",
+    "IDEARTE Producciones",
+    "productora Guatemala",
   ],
+  openGraph: {
+    title: "IDEARTE Producciones | La Certeza de su Exito",
+    description: "Productora audiovisual guatemalteca especializada en crear experiencias memorables.",
+    type: "website",
+    locale: "es_GT",
+  },
 };
 
 export default function RootLayout({
