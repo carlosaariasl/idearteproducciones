@@ -70,7 +70,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-muted-foreground text-sm leading-relaxed mb-4">
-              Productora audiovisual especializada en crear experiencias
+              Productora audiovisual guatemalteca especializada en crear experiencias
               memorables que conectan marcas con su audiencia.
             </p>
             <div className="space-y-2 text-sm">
