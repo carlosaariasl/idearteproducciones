@@ -39,10 +39,24 @@ export function Footer() {
                 className="h-16 w-auto"
               />
             </Link>
-            <p className="text-muted-foreground text-sm leading-relaxed">
+            <p className="text-muted-foreground text-sm leading-relaxed mb-4">
               Productora audiovisual especializada en crear experiencias
               memorables que conectan marcas con su audiencia.
             </p>
+            <div className="space-y-2 text-sm">
+              <a 
+                href="mailto:info@idearteproducciones.com.gt" 
+                className="block text-muted-foreground hover:text-gold transition-colors"
+              >
+                info@idearteproducciones.com.gt
+              </a>
+              <a 
+                href="tel:+50253009050" 
+                className="block text-muted-foreground hover:text-gold transition-colors"
+              >
+                +502 5300 9050
+              </a>
+            </div>
           </div>
 
           {/* Services */}

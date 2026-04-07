@@ -55,10 +55,10 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
                   <a
-                    href="mailto:info@idearteproducciones.com"
+                    href="mailto:info@idearteproducciones.com.gt"
                     className="text-foreground hover:text-gold transition-colors"
                   >
-                    info@idearteproducciones.com
+                    info@idearteproducciones.com.gt
                   </a>
                 </div>
               </div>
@@ -70,10 +70,10 @@ export function Contact() {
                 <div>
                   <p className="text-sm text-muted-foreground">Telefono</p>
                   <a
-                    href="tel:+50212345678"
+                    href="tel:+50253009050"
                     className="text-foreground hover:text-gold transition-colors"
                   >
-                    +502 1234-5678
+                    +502 5300 9050
                   </a>
                 </div>
               </div>
