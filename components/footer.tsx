@@ -148,7 +148,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-gold/20 gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} IDEARTE Producciones. La Certeza de su Exito.
+            &copy; {new Date().getFullYear()} IDEARTE Producciones. La Certeza de su Exito. Todos los derechos reservados.
           </p>
 
           <div className="flex items-center gap-4">
