@@ -127,7 +127,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold text-foreground mb-4">Newsletter</h4>
             <p className="text-sm text-muted-foreground mb-4">
-              Recibe noticias y actualizaciones de nuestros proyectos.
+              Suscribete para recibir noticias y actualizaciones.
             </p>
             <form className="flex gap-2">
               <input
