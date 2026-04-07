@@ -170,7 +170,7 @@ export function Footer() {
       {/* Large Brand Name */}
       <div className="max-w-7xl mx-auto px-6 pb-8">
         <div className="text-[8vw] md:text-[6vw] font-bold text-gradient-gold opacity-20 tracking-tight leading-none text-center select-none">
-          IDEARTE
+          IDEARTE PRODUCCIONES
         </div>
       </div>
     </footer>
