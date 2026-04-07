@@ -36,11 +36,11 @@ export function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="font-mono text-gold text-sm tracking-[0.3em] uppercase mb-4">
               Contacto
             </p>
             <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 text-balance">
-              Hablemos de tu proximo proyecto
+              Hablemos de tu <span className="text-gradient-gold">proximo proyecto</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-10 leading-relaxed">
               Estamos listos para convertir tus ideas en realidad. Cuentanos que
@@ -49,14 +49,14 @@ export function Contact() {
 
             <div className="space-y-6">
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-secondary rounded-xl">
-                  <Mail className="text-accent" size={20} />
+                <div className="p-3 bg-gold/10 rounded-xl border border-gold/20">
+                  <Mail className="text-gold" size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Email</p>
                   <a
                     href="mailto:info@idearteproducciones.com"
-                    className="text-foreground hover:text-accent transition-colors"
+                    className="text-foreground hover:text-gold transition-colors"
                   >
                     info@idearteproducciones.com
                   </a>
@@ -64,14 +64,14 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-secondary rounded-xl">
-                  <Phone className="text-accent" size={20} />
+                <div className="p-3 bg-gold/10 rounded-xl border border-gold/20">
+                  <Phone className="text-gold" size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Telefono</p>
                   <a
                     href="tel:+50212345678"
-                    className="text-foreground hover:text-accent transition-colors"
+                    className="text-foreground hover:text-gold transition-colors"
                   >
                     +502 1234-5678
                   </a>
@@ -79,8 +79,8 @@ export function Contact() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="p-3 bg-secondary rounded-xl">
-                  <MapPin className="text-accent" size={20} />
+                <div className="p-3 bg-gold/10 rounded-xl border border-gold/20">
+                  <MapPin className="text-gold" size={20} />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Ubicacion</p>
@@ -99,7 +99,7 @@ export function Contact() {
           >
             <form
               onSubmit={handleSubmit}
-              className="bg-card border border-border rounded-2xl p-8"
+              className="bg-card border border-gold/20 rounded-2xl p-8"
             >
               <div className="grid sm:grid-cols-2 gap-6 mb-6">
                 <div>
@@ -116,7 +116,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold transition-colors"
                     placeholder="Tu nombre"
                   />
                 </div>
@@ -134,7 +134,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold transition-colors"
                     placeholder="tu@email.com"
                   />
                 </div>
@@ -154,7 +154,7 @@ export function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold transition-colors"
                     placeholder="Nombre de tu empresa"
                   />
                 </div>
@@ -170,7 +170,7 @@ export function Contact() {
                     name="service"
                     value={formData.service}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground focus:outline-none focus:border-accent transition-colors"
+                    className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground focus:outline-none focus:border-gold transition-colors"
                   >
                     <option value="">Selecciona un servicio</option>
                     <option value="musical">Produccion Musical</option>
@@ -195,14 +195,14 @@ export function Contact() {
                   onChange={handleChange}
                   rows={4}
                   required
-                  className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-accent transition-colors resize-none"
+                  className="w-full px-4 py-3 bg-secondary border border-border rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-gold transition-colors resize-none"
                   placeholder="Cuentanos sobre tu proyecto..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-accent text-accent-foreground font-medium rounded-full hover:bg-accent/90 transition-colors"
+                className="w-full flex items-center justify-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-accent-foreground font-medium rounded-full hover:opacity-90 transition-opacity"
               >
                 Enviar Mensaje
                 <Send size={18} />

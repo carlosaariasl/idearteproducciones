@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,12 +22,14 @@ export function Header() {
       <nav className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl font-bold tracking-tight text-foreground">
-              IDEARTE
-            </span>
-            <span className="text-xs font-mono text-accent tracking-widest">
-              PRODUCCIONES
-            </span>
+            <Image
+              src="/images/logo.png"
+              alt="IDEARTE Producciones"
+              width={180}
+              height={60}
+              className="h-12 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -42,7 +45,7 @@ export function Header() {
             ))}
             <Link
               href="#contacto"
-              className="px-4 py-2 bg-accent text-accent-foreground text-sm font-medium rounded-full hover:bg-accent/90 transition-colors"
+              className="px-5 py-2 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-accent-foreground text-sm font-medium rounded-full hover:opacity-90 transition-opacity"
             >
               Cotizar
             </Link>
@@ -81,7 +84,7 @@ export function Header() {
                 <Link
                   href="#contacto"
                   onClick={() => setIsMenuOpen(false)}
-                  className="inline-block w-fit px-4 py-2 bg-accent text-accent-foreground text-sm font-medium rounded-full"
+                  className="inline-block w-fit px-5 py-2 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-accent-foreground text-sm font-medium rounded-full"
                 >
                   Cotizar
                 </Link>

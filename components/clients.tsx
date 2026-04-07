@@ -13,13 +13,13 @@ const clients = [
 
 export function Clients() {
   return (
-    <section className="py-20 bg-background border-y border-border">
+    <section className="py-20 bg-background border-y border-gold/20">
       <div className="max-w-7xl mx-auto px-6">
         <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-sm text-muted-foreground mb-10"
+          className="text-center text-sm text-gold mb-10"
         >
           Confian en nosotros
         </motion.p>
@@ -32,7 +32,7 @@ export function Clients() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.4, delay: index * 0.1 }}
-              className="text-xl md:text-2xl font-bold text-muted-foreground/40 hover:text-foreground transition-colors cursor-default"
+              className="text-xl md:text-2xl font-bold text-gold/30 hover:text-gold transition-colors cursor-default"
             >
               {client}
             </motion.div>

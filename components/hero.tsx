@@ -3,22 +3,42 @@
 import { motion } from "framer-motion";
 import { Play, ArrowDown } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export function Hero() {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden diamond-pattern"
     >
-      {/* Background Video Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-background">
-        <div className="absolute inset-0 bg-[url('/placeholder.svg?height=1080&width=1920')] bg-cover bg-center opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
-      </div>
-
-      {/* Animated Grid Lines */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(201,255,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(201,255,0,0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background via-muted to-background" />
+      
+      {/* Decorative Gold Waves */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 overflow-hidden">
+        <svg
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+          className="absolute bottom-0 w-full h-full"
+        >
+          <defs>
+            <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#c0c0c0" />
+              <stop offset="50%" stopColor="#d4a853" />
+              <stop offset="100%" stopColor="#e8c47a" />
+            </linearGradient>
+          </defs>
+          <path
+            d="M0,60 C200,100 400,20 600,60 C800,100 1000,20 1200,60 L1200,120 L0,120 Z"
+            fill="url(#goldGradient)"
+            opacity="0.15"
+          />
+          <path
+            d="M0,80 C300,40 600,100 900,60 C1050,40 1150,80 1200,70 L1200,120 L0,120 Z"
+            fill="#d4a853"
+            opacity="0.1"
+          />
+        </svg>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
@@ -26,38 +46,66 @@ export function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="space-y-6"
+          className="space-y-8"
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] uppercase">
-            Productora Audiovisual
-          </p>
+          {/* Logo */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="flex justify-center mb-6"
+          >
+            <Image
+              src="/images/logo.png"
+              alt="IDEARTE Producciones - La Certeza de su Exito"
+              width={500}
+              height={300}
+              className="w-full max-w-md md:max-w-lg"
+              priority
+            />
+          </motion.div>
 
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-foreground">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-foreground"
+          >
             <span className="block">Creamos</span>
-            <span className="block text-accent">Experiencias</span>
+            <span className="block text-gradient-gold">Experiencias</span>
             <span className="block">Memorables</span>
-          </h1>
+          </motion.h1>
 
-          <p className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed"
+          >
             Somos expertos en produccion musical, visual y de espectaculos.
             Transformamos ideas en proyectos de alto impacto.
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4"
+          >
             <Link
               href="#portafolio"
-              className="group flex items-center gap-3 px-8 py-4 bg-accent text-accent-foreground font-medium rounded-full hover:bg-accent/90 transition-all"
+              className="group flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-gold-light via-gold to-gold-dark text-accent-foreground font-medium rounded-full hover:opacity-90 transition-all"
             >
               <Play size={20} className="group-hover:scale-110 transition-transform" />
               Ver Portafolio
             </Link>
             <Link
               href="#contacto"
-              className="px-8 py-4 border border-border text-foreground font-medium rounded-full hover:bg-secondary transition-colors"
+              className="px-8 py-4 border border-gold text-gold font-medium rounded-full hover:bg-gold/10 transition-colors"
             >
               Contactar
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
 
         {/* Scroll Indicator */}
@@ -71,7 +119,7 @@ export function Hero() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <ArrowDown size={24} className="text-muted-foreground" />
+            <ArrowDown size={24} className="text-gold" />
           </motion.div>
         </motion.div>
       </div>

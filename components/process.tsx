@@ -25,7 +25,7 @@ const steps = [
 
 export function Process() {
   return (
-    <section id="proceso" className="py-24 md:py-32 bg-muted">
+    <section id="proceso" className="py-24 md:py-32 bg-muted diamond-pattern">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,11 +34,11 @@ export function Process() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-4">
+          <p className="font-mono text-gold text-sm tracking-[0.3em] uppercase mb-4">
             Nuestro Proceso
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground text-balance">
-            Un proceso que comienza y termina con tu vision
+            Un proceso que comienza y termina con <span className="text-gradient-gold">tu vision</span>
           </h2>
         </motion.div>
 
@@ -52,7 +52,7 @@ export function Process() {
               transition={{ duration: 0.6, delay: index * 0.2 }}
               className="relative"
             >
-              <div className="text-8xl font-bold text-accent/20 mb-4">
+              <div className="text-8xl font-bold text-gradient-gold opacity-30 mb-4">
                 {step.number}
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
@@ -74,7 +74,7 @@ export function Process() {
         >
           <a
             href="#contacto"
-            className="inline-flex items-center gap-2 text-accent font-medium hover:underline"
+            className="inline-flex items-center gap-2 text-gold font-medium hover:underline"
           >
             Conoce mas sobre nuestro proceso
             <span className="text-xl">&rarr;</span>

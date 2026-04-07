@@ -76,11 +76,11 @@ export function Portfolio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-4">
+          <p className="font-mono text-gold text-sm tracking-[0.3em] uppercase mb-4">
             Nuestro Trabajo
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Proyectos Destacados
+            Proyectos <span className="text-gradient-gold">Destacados</span>
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
             Hemos trabajado con las marcas e instituciones mas importantes de
@@ -100,7 +100,7 @@ export function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className={`group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-accent/50 transition-all duration-300 ${
+              className={`group relative overflow-hidden rounded-2xl bg-card border border-border hover:border-gold/50 transition-all duration-300 ${
                 index === 0 ? "lg:col-span-2 lg:row-span-2" : ""
               }`}
             >
@@ -117,7 +117,7 @@ export function Portfolio() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <span className="inline-block font-mono text-xs text-accent mb-2">
+                <span className="inline-block font-mono text-xs text-gold mb-2">
                   {project.category}
                 </span>
                 <h3
@@ -131,7 +131,7 @@ export function Portfolio() {
                   {project.description}
                 </p>
               </div>
-              <div className="absolute top-4 right-4 p-3 bg-accent rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-4 right-4 p-3 bg-gradient-to-r from-gold-light via-gold to-gold-dark rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                 <Play size={16} className="text-accent-foreground" />
               </div>
             </motion.a>
@@ -150,7 +150,7 @@ export function Portfolio() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-accent/50 transition-all"
+              className="group relative overflow-hidden rounded-xl bg-card border border-border hover:border-gold/50 transition-all"
             >
               <div className="aspect-video bg-secondary">
                 <img
@@ -161,14 +161,14 @@ export function Portfolio() {
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">
-                <span className="font-mono text-xs text-accent">
+                <span className="font-mono text-xs text-gold">
                   {project.category}
                 </span>
                 <h3 className="font-semibold text-foreground text-sm mt-1">
                   {project.title}
                 </h3>
               </div>
-              <div className="absolute top-2 right-2 p-2 bg-accent/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+              <div className="absolute top-2 right-2 p-2 bg-gold/80 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
                 <ExternalLink size={12} className="text-accent-foreground" />
               </div>
             </motion.a>

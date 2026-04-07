@@ -47,7 +47,7 @@ const services = [
 
 export function Services() {
   return (
-    <section id="servicios" className="py-24 md:py-32 bg-muted">
+    <section id="servicios" className="py-24 md:py-32 bg-muted diamond-pattern">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,11 +56,11 @@ export function Services() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <p className="font-mono text-accent text-sm tracking-[0.3em] uppercase mb-4">
+          <p className="font-mono text-gold text-sm tracking-[0.3em] uppercase mb-4">
             Nuestros Servicios
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Soluciones Creativas
+            Soluciones <span className="text-gradient-gold">Creativas</span>
           </h2>
           <p className="max-w-2xl mx-auto text-muted-foreground text-lg">
             Ofrecemos un servicio integral de produccion audiovisual que abarca
@@ -76,13 +76,13 @@ export function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-accent/50 transition-all duration-300"
+              className="group relative bg-card border border-border rounded-2xl p-8 hover:border-gold/50 transition-all duration-300"
             >
               <div className="flex items-start justify-between mb-6">
-                <div className="p-3 bg-secondary rounded-xl group-hover:bg-accent/10 transition-colors">
-                  <service.icon size={28} className="text-accent" />
+                <div className="p-3 bg-secondary rounded-xl group-hover:bg-gold/10 transition-colors">
+                  <service.icon size={28} className="text-gold" />
                 </div>
-                <span className="font-mono text-4xl font-bold text-secondary">
+                <span className="font-mono text-4xl font-bold text-gold/20">
                   {service.number}
                 </span>
               </div>
@@ -100,7 +100,7 @@ export function Services() {
                     key={feature}
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
-                    <span className="w-1.5 h-1.5 bg-accent rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-gold rounded-full" />
                     {feature}
                   </li>
                 ))}
@@ -108,7 +108,7 @@ export function Services() {
 
               <a
                 href="#contacto"
-                className="inline-flex items-center gap-2 text-accent font-medium group-hover:gap-3 transition-all"
+                className="inline-flex items-center gap-2 text-gold font-medium group-hover:gap-3 transition-all"
               >
                 Solicitar Cotizacion
                 <ArrowRight size={16} />
